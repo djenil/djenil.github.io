@@ -68,12 +68,15 @@
   <header class="sticky top-0 z-40 w-full bg-[#090a0f]/80 backdrop-blur-md border-b border-white/[0.06]">
     <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="#top" class="font-mono text-xs tracking-tight text-zinc-300 hover:text-white transition">jenil dobaria</a>
-      <nav class="flex items-center gap-4 sm:gap-5 text-xs font-mono text-zinc-400" aria-label="Sections">
+      <nav class="flex items-center gap-4 sm:gap-5 text-xs font-mono text-zinc-400 overflow-x-auto whitespace-nowrap" aria-label="Sections">
         <a href="#projects" class="nav-link hover:text-zinc-100 transition">projects</a>
         <a href="#certificates" class="nav-link hover:text-zinc-100 transition">certs</a>
         <a href="#stack" class="nav-link hover:text-zinc-100 transition">stack</a>
         <a href="#about" class="nav-link hover:text-zinc-100 transition">about</a>
         <a href="#contact" class="nav-link hover:text-zinc-100 transition">contact</a>
+        <a href="https://github.com/djenil/djenil.github.io" target="_blank" rel="noopener noreferrer" aria-label="View this site's source code on GitHub" title="View source" class="inline-flex items-center gap-1 text-zinc-300 hover:text-white transition">
+          <i data-lucide="code-xml" class="w-3.5 h-3.5"></i><span>source</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -122,6 +125,7 @@
           <h3 class="text-xs font-mono text-zinc-400">More on GitHub</h3>
           <span id="gh-meta" class="text-[11px] font-mono text-zinc-500"></span>
         </div>
+        <p class="text-[11px] text-zinc-500 leading-relaxed mb-3 max-w-xl">I work across two active accounts: <a href="https://github.com/AgentHackerYT" target="_blank" rel="noopener noreferrer" class="text-zinc-300 underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-400">AgentHackerYT</a>, where most of my repos live, and <a href="https://github.com/djenil" target="_blank" rel="noopener noreferrer" class="text-zinc-300 underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-400">djenil</a>, my newer and more professional one.</p>
         <div id="gh-container" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"></div>
         <div class="mt-3 flex items-center justify-between">
           <button id="gh-more" onclick="showMoreRepos()" class="hidden text-xs font-mono text-zinc-400 hover:text-white transition">show more</button>
@@ -165,7 +169,7 @@
       <ol id="timeline-container" class="relative border-l border-zinc-800 ml-1.5 space-y-5"></ol>
 
       <h3 class="text-xs font-mono text-zinc-400 mt-8 mb-3">Off the keyboard</h3>
-      <div id="interests-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+      <div id="interests-container" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
     </section>
 
     <!-- CONTACT -->
@@ -191,7 +195,7 @@
   </main>
 
   <footer class="border-t border-zinc-800/60 py-6 text-center text-xs font-mono text-zinc-600">
-    jenil dobaria &bull; <a href="https://github.com/djenil" class="hover:text-zinc-400">github.com/djenil</a> &bull; <a href="#top" class="hover:text-zinc-400">back to top</a>
+    jenil dobaria &bull; <a href="https://github.com/djenil" class="hover:text-zinc-400">github.com/djenil</a> &bull; <a href="https://github.com/djenil/djenil.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-400">view source</a> &bull; <a href="#top" class="hover:text-zinc-400">back to top</a>
   </footer>
 
   <!-- CERT MODAL -->
@@ -245,12 +249,13 @@
       ],
 
       links: [
-        { label: "AgentHackerYT", icon: "github",    url: "https://github.com/AgentHackerYT" },
         { label: "djenil",        icon: "github",    url: "https://github.com/djenil" },
+        { label: "AgentHackerYT", icon: "github",    url: "https://github.com/AgentHackerYT" },
         { label: "LinkedIn",      icon: "linkedin",  url: "https://www.linkedin.com/in/jenil-dobaria-076529309/" },
         { label: "NPM",           icon: "package",   url: "https://npmjs.org/~jenil-dev" },
         { label: "Instagram",     icon: "instagram", url: "https://www.instagram.com/jxnil.fr/" },
-        { label: "Letterboxd",    icon: "film",      url: "https://boxd.it/d9zJr" }
+        { label: "Letterboxd",    icon: "film",      url: "https://boxd.it/d9zJr" },
+        { label: "Site source",   icon: "code-xml",  url: "https://github.com/djenil/djenil.github.io" }
       ],
 
       experience: [
@@ -261,6 +266,7 @@
 
       interests: [
         { icon: "film",  title: "Movies", text: "I watch a lot and log it all on Letterboxd.", link: "https://boxd.it/d9zJr", linkLabel: "see my diary" },
+        { icon: "camera", title: "Photography", text: "Casual, not professional, but good enough that friends compliment the shots. Mostly light, skies and places I pass through.", link: "https://www.instagram.com/jxnil.fr/", linkLabel: "on Instagram" },
         { icon: "globe", title: "Random web surfing", text: "Rabbit holes, obscure sites and odd corners of the internet. Good for finding weird tools worth rebuilding." }
       ],
 
@@ -347,8 +353,8 @@
       ],
 
       skills: [
-        { category: "Languages",     items: ["C", "JavaScript", "Python", "SQL", "Bash", "PowerShell"] },
-        { category: "Backend & Web", items: ["Node.js", "Express", "REST APIs", "JWT", "MongoDB", "Tailwind CSS"] },
+        { category: "Languages",     items: ["C", "JavaScript", "Python", "SQL", "Bash"] },
+        { category: "Backend & Web", items: ["Node.js", "Express", "REST APIs", "discord.js"] },
         { category: "Workflow",      items: ["Git", "Linux", "VS Code"] }
       ],
 
@@ -393,7 +399,7 @@
           <i data-lucide="${i.icon}" class="w-4 h-4 text-zinc-400 mb-3"></i>
           <h3 class="text-xs font-medium text-white mb-1">${i.title}</h3>
           <p class="text-[11px] text-zinc-400 leading-relaxed">${i.text}</p>
-          ${i.link ? `<a href="${i.link}" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-[11px] font-mono text-zinc-300 underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-400">${i.linkLabel || 'open'}</a>` : ''}
+          ${i.link ? `<a href="${i.link}" ${i.link.startsWith('#') ? '' : 'target="_blank" rel="noopener noreferrer"'} class="inline-block mt-2 text-[11px] font-mono text-zinc-300 underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-400">${i.linkLabel || 'open'}</a>` : ''}
         </div>`;
     }
     function renderExperience() { $('experience-container').innerHTML = PORTFOLIO_DATA.experience.map(infoCard).join(''); }
@@ -531,7 +537,7 @@
         if (!ghRepos.length) { box.innerHTML = '<p class="text-xs text-zinc-500 font-mono sm:col-span-2">No other public repos yet.</p>'; return; }
         applyRepoFilter();
       } catch (e) {
-        box.innerHTML = '<p class="text-xs text-zinc-500 font-mono sm:col-span-2">Couldn\'t load repos right now (GitHub rate limit or offline). See <a class="underline hover:text-zinc-300" href="https://github.com/agenthackeryt?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/agenthacker</a>.</p>';
+        box.innerHTML = '<p class="text-xs text-zinc-500 font-mono sm:col-span-2">Couldn\'t load repos right now (GitHub rate limit or offline). See <a class="underline hover:text-zinc-300" href="https://github.com/djenil?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/djenil</a>.</p>';
       }
     }
 
